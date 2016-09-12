@@ -1,3 +1,3 @@
-# solid-typescript
+# interpreter-typescript
 
 
