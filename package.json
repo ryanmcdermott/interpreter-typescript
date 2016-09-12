@@ -1,0 +1,28 @@
+{
+  "name": "solid-typescript",
+  "version": "0.0.1",
+  "description": "SOLID software craftsmanship principles in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanmcdermott/solid-typescript.git"
+  },
+  "keywords": [
+    "solid",
+    "object-oriented",
+    "typescript"
+  ],
+  "author": "Ryan McDermott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanmcdermott/solid-typescript/issues"
+  },
+  "homepage": "https://github.com/ryanmcdermott/solid-typescript#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6"
+  }
+}
