@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "removeComments": true,
+        "outFile": "../interpeter.js",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ]
+}
