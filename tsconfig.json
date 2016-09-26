@@ -2,9 +2,11 @@
     "compilerOptions": {
         "module": "commonjs",
         "removeComments": true,
-        "outFile": "../interpeter.js",
-        "sourceMap": true
+        "outDir": "./build"
     },
+    "files": [
+        "src/interpreter.ts"
+    ],
     "exclude": [
         "node_modules",
         "wwwroot"

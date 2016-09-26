@@ -1,28 +1,25 @@
 {
-  "name": "solid-typescript",
+  "name": "interpreter-typescript",
   "version": "0.0.1",
-  "description": "SOLID software craftsmanship principles in Typescript",
+  "description": "Toy language interpreter written in TypeScript",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanmcdermott/solid-typescript.git"
+    "url": "git+https://github.com/ryanmcdermott/interpreter-typescript.git"
   },
   "keywords": [
-    "solid",
-    "object-oriented",
+    "interpreter",
     "typescript"
   ],
   "author": "Ryan McDermott",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryanmcdermott/solid-typescript/issues"
+    "url": "https://github.com/ryanmcdermott/interpeter-typescript/issues"
   },
-  "homepage": "https://github.com/ryanmcdermott/solid-typescript#readme",
+  "homepage": "https://github.com/ryanmcdermott/interpeter-typescript#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6"
   }
 }

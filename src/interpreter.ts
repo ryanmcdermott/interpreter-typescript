@@ -1,100 +1,7 @@
+/// <reference path="./types.d.ts"/>
+
 import Lexer from './lexer';
-
-type Tag = "RESERVED" | "ID" | "INT" | "SKIP" | "EOF";
-
-interface LanguageRegex {
-  pattern: RegExp,
-  tag: Tag
-}
-
-interface Token {
-  data: string,
-  tag: Tag
-}
-
-var TOKEN_EXPRESSIONS: Array <LanguageRegex> = [{
-  pattern: /\:=/,
-  tag: 'RESERVED',
-}, {
-  pattern: /\)/,
-  tag: 'RESERVED',
-}, {
-  pattern: /;/,
-  tag: 'RESERVED',
-}, {
-  pattern: /\+/,
-  tag: 'RESERVED',
-}, {
-  pattern: /-/,
-  tag: 'RESERVED',
-}, {
-  pattern: /\*/,
-  tag: 'RESERVED',
-}, {
-  pattern: /\//,
-  tag: 'RESERVED',
-}, {
-  pattern: /</,
-  tag: 'RESERVED',
-}, {
-  pattern: />=/,
-  tag: 'RESERVED',
-}, {
-  pattern: />/,
-  tag: 'RESERVED',
-}, {
-  pattern: /=/,
-  tag: 'RESERVED',
-}, {
-  pattern: /!=/,
-  tag: 'RESERVED',
-}, {
-  pattern: /and/,
-  tag: 'RESERVED',
-}, {
-  pattern: /or/,
-  tag: 'RESERVED',
-}, {
-  pattern: /not/,
-  tag: 'RESERVED',
-}, {
-  pattern: /if/,
-  tag: 'RESERVED',
-}, {
-  pattern: /then/,
-  tag: 'RESERVED',
-}, {
-  pattern: /else/,
-  tag: 'RESERVED',
-}, {
-  pattern: /while/,
-  tag: 'RESERVED',
-}, {
-  pattern: /do/,
-  tag: 'RESERVED',
-}, {
-  pattern: /end/,
-  tag: 'RESERVED',
-}, {
-  pattern: /[0-9]+/,
-  tag: 'INT',
-}, {
-  pattern: /[A-Za-z][A-Za-z0-9_]*/,
-  tag: 'ID',
-}, {
-  pattern: /\s+/,
-  tag: 'SKIP'
-}, {
-  pattern: /[\n\t]+/,
-  tag: 'SKIP'
-}, {
-  pattern: /#[^\n]*/,
-  tag: 'SKIP'
-}, {
-  pattern: /$/,
-  tag: 'EOF'
-}];
-
+import LANGUAGE_EXPRESSIONS from './language-expressions';
 
 class Interpreter {
   code: string;
@@ -109,6 +16,8 @@ class Interpreter {
 
   parse() {
     this.lex();
+
+    // TODO: Actually parse
   }
 
   lex() {
@@ -141,6 +50,6 @@ class Interpreter {
   }
 }
 
-var interpreter = new Interpreter("x:=1;", TOKEN_EXPRESSIONS);
+var interpreter = new Interpreter("x:=1;", LANGUAGE_EXPRESSIONS);
 interpreter.parse();
 console.warn(interpreter.tokens);
