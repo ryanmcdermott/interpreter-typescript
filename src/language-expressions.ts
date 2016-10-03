@@ -1,68 +1,57 @@
 /// <reference path="./types.d.ts"/>
 
-var LANGUAGE_EXPRESSIONS: Array <LanguageRegex> = [{
-  pattern: /\:=/,
-  tag: 'RESERVED',
+var LANGUAGE_EXPRESSIONS: Array <LanguageRegex> = [
+{
+  pattern: /\(/,
+  tag: 'PUNCTUATION',
 }, {
   pattern: /\)/,
-  tag: 'RESERVED',
+  tag: 'PUNCTUATION',
 }, {
   pattern: /;/,
-  tag: 'RESERVED',
+  tag: 'PUNCTUATION',
 }, {
   pattern: /\+/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: /-/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: /\*/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: /\//,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: /</,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: />=/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: />/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
 }, {
   pattern: /=/,
-  tag: 'RESERVED',
+  tag: 'OPERATOR',
+}, , {
+  pattern: /\&\&/,
+  tag: 'OPERATOR',
 }, {
-  pattern: /!=/,
-  tag: 'RESERVED',
-}, {
-  pattern: /and/,
-  tag: 'RESERVED',
-}, {
-  pattern: /or/,
-  tag: 'RESERVED',
-}, {
-  pattern: /not/,
-  tag: 'RESERVED',
+  pattern: /\|\|/,
+  tag: 'OPERATOR',
 }, {
   pattern: /if/,
-  tag: 'RESERVED',
+  tag: 'KEYWORD',
 }, {
   pattern: /then/,
-  tag: 'RESERVED',
+  tag: 'KEYWORD',
 }, {
   pattern: /else/,
-  tag: 'RESERVED',
+  tag: 'KEYWORD',
 }, {
-  pattern: /while/,
-  tag: 'RESERVED',
-}, {
-  pattern: /do/,
-  tag: 'RESERVED',
-}, {
-  pattern: /end/,
-  tag: 'RESERVED',
+  pattern: /function/,
+  tag: 'KEYWORD',
 }, {
   pattern: /[0-9]+/,
   tag: 'INT',
