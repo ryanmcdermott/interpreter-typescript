@@ -20,6 +20,9 @@ export default class Interpreter {
     this.tokens = this.lex(this.code);
     var parser = new Parser(this.tokens);
     this.ast = parser.parse();
+    
+    console.log(this.tokens);
+    console.log(this.ast);
   }
 
   lex(code: string) {
@@ -65,4 +68,3 @@ class Scope {
 
 var interpreter = new Interpreter("x=1+2;", LANGUAGE_EXPRESSIONS);
 interpreter.evaluate();
-console.warn(interpreter.tokens);

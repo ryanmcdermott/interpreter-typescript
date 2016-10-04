@@ -1,4 +1,4 @@
-type Tag = "RESERVED" | "ID" | "INT" | "SKIP" | "EOF";
+type Tag = "KEYWORD" | "OPERATOR" | "ID" | "INT" | "SKIP" | "EOF";
 
 interface LanguageRegex {
   pattern: RegExp,
